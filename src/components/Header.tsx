@@ -29,10 +29,18 @@ const Header = () => {
             <ul className="flex gap-6 md:justify-end justify-start text-xs font-body tracking-wider">
               <li>
                 <button 
-                  onClick={() => scrollToSection('projects')}
+                  onClick={() => scrollToSection('services')}
                   className="hover:opacity-60 transition-opacity"
                 >
-                  PROJECTS
+                  SERVICES
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('works')}
+                  className="hover:opacity-60 transition-opacity"
+                >
+                  WORKS
                 </button>
               </li>
               <li>

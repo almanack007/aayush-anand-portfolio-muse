@@ -19,7 +19,7 @@ const HeroSection = () => {
               AAYUSH ANAND©
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl font-body max-w-2xl mb-12 leading-relaxed">
-              A product and operations leader who builds from 0-to-1. I craft solutions so compelling, customers become investors.
+              I've worked across Product Launches, GTM Strategy & Venture Fundraising, scaling products from 0→1.
             </p>
             <Button 
               onClick={scrollToContact}
