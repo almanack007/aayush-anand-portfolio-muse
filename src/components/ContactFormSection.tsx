@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Check } from "lucide-react";
 
 const ContactFormSection = () => {
   const { toast } = useToast();
@@ -13,6 +14,7 @@ const ContactFormSection = () => {
     ask: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,18 +41,23 @@ const ContactFormSection = () => {
 
       // Since we use no-cors, we can't check the actual response
       // We assume success if no error is thrown
+      setIsSubmitted(true);
+      
       toast({
-        title: "Response Received!",
+        title: "✓ Message Sent Successfully!",
         description: "We'll get back to you soon.",
       });
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        contact: "",
-        ask: ""
-      });
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setFormData({
+          name: "",
+          email: "",
+          contact: "",
+          ask: ""
+        });
+        setIsSubmitted(false);
+      }, 3000);
     } catch (error) {
       toast({
         title: "Error",
@@ -129,11 +136,20 @@ const ContactFormSection = () => {
             </div>
             <Button 
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || isSubmitted}
               size="lg"
-              className="bg-light-bg text-dark-bg hover:bg-light-bg/90 transition-colors text-sm tracking-wider px-8 py-6 w-full md:w-auto"
+              className="bg-light-bg text-dark-bg hover:bg-light-bg/90 transition-colors text-sm tracking-wider px-8 py-6 w-full md:w-auto font-medium"
             >
-              {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
+              {isSubmitted ? (
+                <span className="flex items-center gap-2">
+                  <Check className="w-5 h-5" />
+                  MESSAGE SENT
+                </span>
+              ) : isSubmitting ? (
+                "SENDING..."
+              ) : (
+                "SEND MESSAGE"
+              )}
             </Button>
           </form>
         </div>
