@@ -17,6 +17,13 @@ const HeroSection = () => {
     }
   };
 
+  const scrollToAbout = () => {
+    const element = document.getElementById('about');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="section-light min-h-screen pt-24 pb-16 relative">
       <div className="container mx-auto px-6 max-w-7xl">
@@ -57,7 +64,7 @@ const HeroSection = () => {
             {/* Social/Navigation Icons - aligned left */}
             <div className="flex items-center gap-6">
               <a 
-                href="https://www.linkedin.com/in/aayush-anand-/" 
+                href="https://www.linkedin.com/in/aayush-anand05/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -73,9 +80,9 @@ const HeroSection = () => {
                 <FolderOpen className="w-6 h-6" />
               </button>
               <button 
-                onClick={scrollToContact}
+                onClick={scrollToAbout}
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Contact"
+                aria-label="About"
               >
                 <Mail className="w-6 h-6" />
               </button>
