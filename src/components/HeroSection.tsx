@@ -91,7 +91,7 @@ const HeroSection = () => {
 
           {/* Right Column - Circular Profile Image */}
           <div className="order-1 lg:order-2 flex flex-col items-center lg:items-end">
-            <div className="relative w-full max-w-[380px] aspect-square">
+            <div className="relative w-full max-w-[380px] aspect-square rounded-full border-[12px] border-foreground p-2">
               <img 
                 src={headshot}
                 alt="Aayush Anand - Product & Operations Leader"
