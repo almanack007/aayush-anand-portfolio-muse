@@ -95,7 +95,7 @@ const HeroSection = () => {
               <img 
                 src={headshot}
                 alt="Aayush Anand - Product & Operations Leader"
-                className="w-full h-full grayscale rounded-full object-cover object-center"
+                className="w-full h-full rounded-full object-cover object-center"
               />
             </div>
           </div>
