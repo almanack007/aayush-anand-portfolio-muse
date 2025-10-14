@@ -20,15 +20,13 @@ const ContactFormSection = () => {
 
     try {
       // Google Form URL with entry IDs
-      // Note: User needs to inspect their form to get actual entry IDs
       const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeXr_x4Ak82V9gmndPK77Bci_RsiJ5QZslsPR7b6H4-M3_XMQ/formResponse";
       
       const formDataEncoded = new URLSearchParams();
-      // These entry IDs are placeholders - user needs to replace with actual ones
-      formDataEncoded.append("entry.1234567890", formData.name); // Replace with actual entry ID
-      formDataEncoded.append("entry.0987654321", formData.email); // Replace with actual entry ID
-      formDataEncoded.append("entry.1122334455", formData.contact); // Replace with actual entry ID
-      formDataEncoded.append("entry.5544332211", formData.ask); // Replace with actual entry ID
+      formDataEncoded.append("entry.1826182394", formData.name);
+      formDataEncoded.append("entry.1562027025", formData.email);
+      formDataEncoded.append("entry.1510006801", formData.contact);
+      formDataEncoded.append("entry.1867320212", formData.ask);
 
       await fetch(formUrl, {
         method: "POST",

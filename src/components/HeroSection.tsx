@@ -13,19 +13,18 @@ const HeroSection = () => {
     <section className="section-light min-h-screen pt-32 pb-20 relative">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Main Heading - Centered */}
-        <div className="text-center mb-16">
-          <h1 className="text-display-xl font-display mb-4">
-            AAYUSH ANAND©
+        <div className="text-center mb-12">
+          <h1 className="text-display-xl font-display">
+            AAYUSH ANAND<span className="text-5xl align-super">©</span>
           </h1>
-          <div className="text-2xl">↘</div>
         </div>
 
         {/* Content Grid - Description and Image */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-20">
           {/* Left Column - Description and Button */}
           <div className="order-2 lg:order-1 space-y-8">
-            <p className="text-lg md:text-xl lg:text-2xl font-body leading-relaxed">
-              Associate Product Manager and Business Strategist helping Startups gain their unfair advantage. If you're as passionate about startups as I am, let's connect.
+            <p className="text-lg md:text-xl lg:text-2xl font-body leading-relaxed text-muted-foreground">
+              I've worked across Product Launches, GTM Strategy & Venture Fundraising, scaling products from 0→1.
             </p>
             <Button 
               onClick={scrollToContact}
