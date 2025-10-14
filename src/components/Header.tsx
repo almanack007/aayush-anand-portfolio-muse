@@ -13,7 +13,7 @@ const Header = () => {
           {/* Name - Left */}
           <div className="col-span-12 md:col-span-4">
             <h2 className="text-sm md:text-base font-display tracking-tight">
-              AAYUSH ANAND®
+              AAYUSH ANAND
             </h2>
           </div>
 
