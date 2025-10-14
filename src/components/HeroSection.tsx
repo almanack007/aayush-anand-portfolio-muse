@@ -10,16 +10,22 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="section-light min-h-screen pt-32 pb-20">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column - Text */}
-          <div className="col-span-12 lg:col-span-7 order-2 lg:order-1">
-            <h1 className="text-display-xl font-display mb-8">
-              AAYUSH ANAND©
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl font-body max-w-2xl mb-12 leading-relaxed">
-              I've worked across Product Launches, GTM Strategy & Venture Fundraising, scaling products from 0→1.
+    <section className="section-light min-h-screen pt-32 pb-20 relative">
+      <div className="container mx-auto px-6 max-w-6xl">
+        {/* Main Heading - Centered */}
+        <div className="text-center mb-16">
+          <h1 className="text-display-xl font-display mb-4">
+            AAYUSH ANAND©
+          </h1>
+          <div className="text-2xl">↘</div>
+        </div>
+
+        {/* Content Grid - Description and Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-20">
+          {/* Left Column - Description and Button */}
+          <div className="order-2 lg:order-1 space-y-8">
+            <p className="text-lg md:text-xl lg:text-2xl font-body leading-relaxed">
+              Associate Product Manager and Business Strategist helping Startups gain their unfair advantage. If you're as passionate about startups as I am, let's connect.
             </p>
             <Button 
               onClick={scrollToContact}
@@ -30,16 +36,21 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Right Column - Image */}
-          <div className="col-span-12 lg:col-span-5 order-1 lg:order-2">
-            <div className="relative">
+          {/* Right Column - Profile Image */}
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[350px]">
               <img 
                 src={headshot}
                 alt="Aayush Anand - Product & Operations Leader"
-                className="w-full h-auto grayscale"
+                className="w-full h-auto grayscale rounded-2xl object-cover"
               />
             </div>
           </div>
+        </div>
+
+        {/* Available for Work - Bottom Right */}
+        <div className="absolute bottom-8 right-8 hidden lg:block">
+          <p className="text-sm tracking-wider font-medium">AVAILABLE FOR WORK</p>
         </div>
       </div>
     </section>
