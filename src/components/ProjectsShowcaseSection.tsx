@@ -1,3 +1,12 @@
+import catchitDashboard from "@/assets/catchit-dashboard.png";
+import catchitConfig from "@/assets/catchit-config.png";
+import catchitAnalysis from "@/assets/catchit-analysis.png";
+import catchitLogic from "@/assets/catchit-logic.png";
+import resume2websiteMain from "@/assets/resume2website-main.png";
+import resume2websiteCreation from "@/assets/resume2website-creation.png";
+import talentfinder from "@/assets/talentfinder.png";
+import youtubeLearning from "@/assets/youtube-learning.png";
+
 const projects = [
   {
     number: "01.",
@@ -11,7 +20,8 @@ const projects = [
       "Automated technician dispatch via SMS",
       "Human escalation on keyword detection"
     ],
-    demoLink: "#", // User will provide later
+    images: [catchitDashboard, catchitConfig, catchitAnalysis, catchitLogic],
+    demoLink: "#",
     imageAlt: "Flowra AI Voice Agent Dashboard"
   },
   {
@@ -25,7 +35,8 @@ const projects = [
       "Mobile-responsive designs",
       "Custom domain support"
     ],
-    demoLink: "#", // User will provide later
+    images: [resume2websiteMain, resume2websiteCreation],
+    demoLink: "#",
     imageAlt: "Resume2Website Portfolio Builder"
   },
   {
@@ -39,8 +50,25 @@ const projects = [
       "Intelligent candidate scoring",
       "Background verification automation"
     ],
-    demoLink: "#", // User will provide later
+    images: [talentfinder],
+    demoLink: "#",
     imageAlt: "Talent Finder ATS Dashboard"
+  },
+  {
+    number: "04.",
+    name: "YOUTUBE TO LEARNING APP",
+    tags: "AI / EDTECH / NO-CODE",
+    description: "Transform any YouTube video into an interactive learning experience. AI-powered content extraction creates structured courses with quizzes, summaries, and key takeaways automatically.",
+    features: [
+      "Automated content extraction from YouTube",
+      "AI-generated quizzes and summaries",
+      "Interactive learning modules",
+      "Progress tracking and analytics"
+    ],
+    images: [youtubeLearning],
+    demoLink: "https://ai.studio/apps/drive/1hDpcLGtST8gLOg2EMzSZP19CjV02XgFm",
+    videoDemoLink: "https://drive.google.com/file/d/18OxGicg2alYgQ9_FwU06RUtL7ZRir5IB/view?usp=sharing",
+    imageAlt: "YouTube to Learning App Dashboard"
   },
 ];
 
@@ -91,10 +119,41 @@ const ProjectsShowcaseSection = () => {
                     </ul>
                   </div>
 
-                  {/* Placeholder for demo link and image - user will provide later */}
-                  <div className="mt-8 p-6 border border-foreground bg-background/5">
-                    <p className="text-sm font-body opacity-60 mb-2">Product Screenshot & Demo Link</p>
-                    <p className="text-xs font-body opacity-40">[To be added in next iteration]</p>
+                  {/* Product Screenshots */}
+                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {project.images.map((image, imgIndex) => (
+                      <div key={imgIndex} className="border border-foreground overflow-hidden">
+                        <img 
+                          src={image} 
+                          alt={`${project.name} screenshot ${imgIndex + 1}`}
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Demo Links */}
+                  <div className="mt-6 flex gap-4">
+                    {project.demoLink && project.demoLink !== "#" && (
+                      <a 
+                        href={project.demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-3 border border-foreground text-sm font-body tracking-wider hover:bg-foreground hover:text-background transition-colors"
+                      >
+                        VIEW DEMO
+                      </a>
+                    )}
+                    {project.videoDemoLink && (
+                      <a 
+                        href={project.videoDemoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-3 border border-foreground text-sm font-body tracking-wider hover:bg-foreground hover:text-background transition-colors"
+                      >
+                        WATCH VIDEO
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

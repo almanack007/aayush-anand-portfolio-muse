@@ -3,11 +3,10 @@ const experiences = [
     number: "01.",
     company: "CLARA AI",
     role: "Founding Team Member",
-    period: "Feb 2024 - Present",
+    period: "Jan 2025 - Present",
     tags: "AI / B2B SAAS / PRODUCT",
     highlights: [
-      "Led 0-to-1 launch of CLARA AI agent, securing $100K ARR in 2 months with 55% MoM growth",
-      "Generated $1.5M+ in new contract value through strategic partnerships and enterprise client acquisition",
+      "Led 0-to-1 launch of CLARA AI agent, delivering rapid growth through strategic product positioning",
       "Two enterprise clients became so successful with our solution, they invested in the company—proof of product-market fit"
     ],
     description: "Spearheaded product strategy and GTM for flagship AI agent in US service industries. Authored PRD, led customer discovery, and drove cross-functional teams from concept to revenue-generating product."
@@ -15,15 +14,15 @@ const experiences = [
   {
     number: "02.",
     company: "ZENTRADES.AI",
-    role: "Product & Venture Fundraising",
+    role: "Product & Investor Relations - Founder's Office",
     period: "Feb 2024 - Present",
     tags: "OPERATIONS / FUNDRAISING / GTM",
     highlights: [
-      "Co-managed $2M funding round, securing $500K in strategic investments",
-      "Converted customers into investors through compelling product narratives and pitch deck strategy",
-      "Drove 35%+ company revenue increase in 3 months through process optimization"
+      "Co-managed funding round, securing strategic investments through compelling product narratives",
+      "Converted customers into investors through pitch deck strategy and investor relations",
+      "Drove significant revenue growth through process optimization and operational excellence"
     ],
-    description: "Owned operational excellence and fundraising initiatives in CEO's office. Scaled team from 30 to 150+ through strategic hiring while establishing OKR frameworks and accountability structures."
+    description: "Worked closely with CEO and the leadership team to scale operational excellence and fundraising initiatives. Scaled team significantly through strategic hiring while establishing OKR frameworks and accountability structures."
   },
   {
     number: "03.",
