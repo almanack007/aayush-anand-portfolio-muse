@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Brutalist Portfolio Color System */
-    --background: 40 11% 90%; /* #EAE8E2 - Light beige */
+    --background: 0 0% 90%; /* #E6E6E6 - Light gray */
     --foreground: 0 0% 4%; /* #0A0A0A - Near black */
 
     --card: 40 11% 90%;

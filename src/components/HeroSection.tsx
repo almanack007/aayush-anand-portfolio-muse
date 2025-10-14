@@ -96,6 +96,7 @@ const HeroSection = () => {
                 src={headshot}
                 alt="Aayush Anand - Product & Operations Leader"
                 className="w-full h-full rounded-full object-cover object-center"
+                style={{ boxShadow: 'inset 0 0 0 2px #4d4d4d' }}
               />
             </div>
           </div>
