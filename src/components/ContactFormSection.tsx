@@ -138,7 +138,7 @@ const ContactFormSection = () => {
               type="submit"
               disabled={isSubmitting || isSubmitted}
               size="lg"
-              className="bg-light-fg text-dark-bg hover:bg-light-fg/90 border-2 border-light-fg transition-colors text-sm tracking-wider px-8 py-6 w-full md:w-auto font-medium [&>*]:text-dark-bg"
+              className="bg-transparent text-light-fg hover:bg-light-fg hover:text-dark-bg border-2 border-light-fg transition-colors text-sm tracking-wider px-8 py-6 w-full md:w-auto font-medium [&>*]:text-light-fg"
             >
               {isSubmitted ? (
                 <span className="flex items-center gap-2">

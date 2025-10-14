@@ -1,4 +1,4 @@
-import headshot from "@/assets/headshot.jpg";
+import headshot from "@/assets/headshot.png";
 import { Button } from "@/components/ui/button";
 import { Linkedin, FolderOpen, Mail, ArrowUpRight, ArrowRight } from "lucide-react";
 
