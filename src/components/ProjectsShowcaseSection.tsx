@@ -74,7 +74,7 @@ const projects = [
 
 const ProjectsShowcaseSection = () => {
   return (
-    <section id="about" className="section-light py-24 md:py-32 border-t border-foreground">
+    <section id="projects" className="section-light py-24 md:py-32 border-t border-foreground">
       <div className="container mx-auto px-6">
         <h2 className="text-display-md font-display mb-20">PROJECTS /</h2>
 
