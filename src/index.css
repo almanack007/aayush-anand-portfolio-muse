@@ -2,48 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Brutalist Portfolio Color System */
-    --background: 0 0% 90%; /* #E6E6E6 - Light gray */
-    --foreground: 0 0% 4%; /* #0A0A0A - Near black */
-
+    --background: 0 0% 90%;
+    --foreground: 0 0% 4%;
     --card: 40 11% 90%;
     --card-foreground: 0 0% 4%;
-
     --popover: 40 11% 90%;
     --popover-foreground: 0 0% 4%;
-
-    --primary: 0 0% 4%; /* Dark for buttons and emphasis */
-    --primary-foreground: 40 11% 90%; /* Light text on dark */
-
+    --primary: 0 0% 4%;
+    --primary-foreground: 40 11% 90%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 40 11% 90%;
-
     --muted: 40 8% 80%;
     --muted-foreground: 0 0% 30%;
-
     --accent: 0 0% 4%;
     --accent-foreground: 40 11% 90%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 40 11% 90%;
-
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 0 0% 4%;
-
-    --radius: 0rem; /* Brutalist = no rounded corners */
-
-    /* Dark sections */
+    --radius: 0rem;
     --dark-bg: 0 0% 4%;
     --dark-fg: 40 11% 90%;
-
-    /* Typography */
     --font-display: 'Archivo Black', sans-serif;
     --font-body: 'Inter', sans-serif;
   }
@@ -51,28 +33,20 @@ All colors MUST be HSL.
   .dark {
     --background: 0 0% 4%;
     --foreground: 40 11% 90%;
-
     --card: 0 0% 4%;
     --card-foreground: 40 11% 90%;
-
     --popover: 0 0% 4%;
     --popover-foreground: 40 11% 90%;
-
     --primary: 40 11% 90%;
     --primary-foreground: 0 0% 4%;
-
     --secondary: 0 0% 15%;
     --secondary-foreground: 40 11% 90%;
-
     --muted: 0 0% 15%;
     --muted-foreground: 40 8% 60%;
-
     --accent: 40 11% 90%;
     --accent-foreground: 0 0% 4%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 40 11% 90%;
-
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 40 11% 90%;
@@ -83,15 +57,12 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground font-body antialiased;
   }
-
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
   }
-
   html {
     scroll-behavior: smooth;
   }
@@ -101,18 +72,26 @@ All colors MUST be HSL.
   .font-display {
     font-family: var(--font-display);
   }
-
   .font-body {
     font-family: var(--font-body);
   }
-
   .section-dark {
     background-color: hsl(var(--dark-bg));
     color: hsl(var(--dark-fg));
   }
-
   .section-light {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
   }
+}
+
+.glass-card {
+  background: rgba(28, 30, 51, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1),
+    0 8px 32px 0 rgba(0, 82, 255, 0.3);
+  color: white;
 }

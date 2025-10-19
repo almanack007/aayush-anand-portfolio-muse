@@ -1,16 +1,13 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
+import path from "path"
+import react from "@vitejs/plugin-react-swc" // This is the correct plugin for your project
+import { defineConfig } from "vite"
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  // THIS IS THE CRITICAL LINE THAT WAS MISSING OR INCORRECT
   base: "/aayush-anand-portfolio-muse/",
-
   plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+})

@@ -29,13 +29,13 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="section-light py-24 md:py-32 border-t border-foreground">
+    <section id="services" className="bg-black py-24 md:py-32 border-t border-foreground">
       <div className="container mx-auto px-6">
-        <h2 className="text-display-md font-display mb-20">SERVICES /</h2>
+        <h2 className="text-display-md font-display mb-20 text-white">SERVICES /</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           {services.map((service, index) => (
-            <article key={index} className="border-t border-foreground pt-8">
+            <article key={index} className="glass-card p-8 rounded-xl">
               <h3 className="text-2xl md:text-3xl font-display mb-4">
                 {service.title}
               </h3>
@@ -50,7 +50,7 @@ const ServicesSection = () => {
                 {service.description}
               </p>
               {service.tools && (
-                <div className="flex gap-3 mt-6">
+                <div className="flex gap-3 mt-6 flex-wrap">
                   {service.tools.map((tool, toolIndex) => (
                     <span key={toolIndex} className="px-3 py-1 border border-foreground text-xs font-body tracking-wider">
                       {tool}

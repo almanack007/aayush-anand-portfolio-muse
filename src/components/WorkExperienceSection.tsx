@@ -1,99 +1,91 @@
-const experiences = [
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const workData = [
   {
+    id: "clara",
     number: "01.",
-    company: "CLARA AI",
+    title: "CLARA AI",
     role: "Founding Team Member",
-    period: "Jan 2025 - Present",
+    date: "Jan 2025 - Present",
     tags: "AI / B2B SAAS / PRODUCT",
-    highlights: [
+    descriptionPoints: [
       "Led 0-to-1 launch of CLARA AI agent, delivering rapid growth through strategic product positioning",
-      "Two enterprise clients became so successful with our solution, they invested in the company—proof of product-market fit"
+      "Two enterprise clients became so successful with our solution, they invested in the company—proof of product-market fit",
     ],
-    description: "Spearheaded product strategy and GTM for flagship AI agent in US service industries. Authored PRD, led customer discovery, and drove cross-functional teams from concept to revenue-generating product."
+    summary: "Spearheaded product strategy and GTM for flagship AI agent in US service industries. Authored PRD, led customer discovery, and drove cross-functional teams from concept to revenue-generating product.",
   },
   {
+    id: "zentrades",
     number: "02.",
-    company: "ZENTRADES.AI",
+    title: "ZENTRADES.AI",
     role: "Product & Investor Relations - Founder's Office",
-    period: "Feb 2024 - Present",
+    date: "Feb 2024 - Present",
     tags: "OPERATIONS / FUNDRAISING / GTM",
-    highlights: [
+    descriptionPoints: [
       "Co-managed funding round, securing strategic investments through compelling product narratives",
       "Converted customers into investors through pitch deck strategy and investor relations",
-      "Drove significant revenue growth through process optimization and operational excellence"
+      "Drove significant revenue growth through process optimization and operational excellence",
     ],
-    description: "Worked closely with CEO and the leadership team to scale operational excellence and fundraising initiatives. Scaled team significantly through strategic hiring while establishing OKR frameworks and accountability structures."
+    summary: "Worked closely with CEO and the leadership team to scale operational excellence and fundraising initiatives. Scaled team significantly through strategic hiring while establishing OKR frameworks and accountability structures.",
   },
   {
+    id: "msde",
     number: "03.",
-    company: "MSDE GOVT. OF INDIA",
+    title: "MSDE GOVT. OF INDIA",
     role: "Project Manager & Mentor",
-    period: "Dec 2023 - Feb 2024",
+    date: "Dec 2023 - Feb 2024",
     tags: "EDTECH / PROGRAM MANAGEMENT",
-    description: "Managed ₹50 Lakh government-funded robotics education initiative. Designed and scaled hands-on training programs impacting 300+ students, securing continued funding through measurable impact reporting."
+    descriptionPoints: [],
+    summary: "Managed ₹50 Lakh government-funded robotics education initiative. Designed and scaled hands-on training programs impacting 300+ students, securing continued funding through measurable impact reporting.",
   },
   {
+    id: "robogears",
     number: "04.",
-    company: "ROBOGEARS (STEALTH)",
+    title: "ROBOGEARS (STEALTH)",
     role: "Co-Founder",
-    period: "Nov 2023 - Mar 2024",
+    date: "Nov 2023 - Mar 2024",
     tags: "ENTREPRENEURSHIP / HARDWARE",
-    description: "Identified market gap for affordable robotics components among engineering students. Built supply chain from scratch and validated proof-of-concept with 50+ units sold in first run."
+    descriptionPoints: [],
+    summary: "Identified market gap for affordable robotics components among engineering students. Built supply chain from scratch and validated proof-of-concept with 50+ units sold in first run.",
   },
 ];
 
 const WorkExperienceSection = () => {
   return (
-    <section id="works" className="section-dark py-24 md:py-32">
-      <div className="container mx-auto px-6">
-        <h2 className="text-display-md font-display mb-20">WORK EXPERIENCE /</h2>
-
-        <div className="space-y-24 md:space-y-32">
-          {experiences.map((exp, index) => (
-            <article key={index} className="border-t border-dark-fg pt-12">
-              <div className="grid grid-cols-12 gap-8 md:gap-12">
-                {/* Number */}
-                <div className="col-span-12 md:col-span-3">
-                  <p className="text-display-lg font-display opacity-20">
-                    {exp.number}
-                  </p>
-                </div>
-
-                {/* Experience Details */}
-                <div className="col-span-12 md:col-span-9">
-                  <h3 className="text-3xl md:text-5xl font-display mb-2">
-                    {exp.company}
-                  </h3>
-                  <p className="text-lg md:text-xl font-body mb-4 opacity-80">
-                    {exp.role}
-                  </p>
-                  <p className="text-xs md:text-sm font-body tracking-wider mb-2 opacity-60">
-                    {exp.period}
-                  </p>
-                  <p className="text-xs md:text-sm font-body tracking-wider mb-6 opacity-60">
-                    {exp.tags}
-                  </p>
-
-                  {exp.highlights && (
-                    <ul className="mb-6 space-y-3">
-                      {exp.highlights.map((highlight, hIndex) => (
-                        <li key={hIndex} className="text-base md:text-lg font-body leading-relaxed flex gap-3">
-                          <span className="opacity-60">•</span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-
-                  <p className="text-lg md:text-xl font-body leading-relaxed max-w-3xl">
-                    {exp.description}
-                  </p>
-                </div>
+    <section id="work" className="py-12 px-4 md:px-8">
+      <h2 className="text-display-md font-display mb-20">WORK EXPERIENCE /</h2>
+      <Accordion type="single" collapsible className="w-full">
+        {workData.map((job) => (
+          <AccordionItem value={job.id} key={job.id}>
+            <AccordionTrigger className="hover:no-underline">
+              <div className="text-left w-full">
+                <p className="text-gray-400">{job.number}</p>
+                <h3 className="text-2xl font-medium">{job.title}</h3>
+                <p className="font-medium">{job.role}</p>
+                <p className="text-sm text-gray-400">{job.date}</p>
+                <p className="text-sm text-gray-400">{job.tags}</p>
               </div>
-            </article>
-          ))}
-        </div>
-      </div>
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="pl-4">
+                {job.descriptionPoints.length > 0 && (
+                  <ul className="list-disc pl-5 space-y-2">
+                    {job.descriptionPoints.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
+                )}
+                <p className="mt-4">{job.summary}</p>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
     </section>
   );
 };
