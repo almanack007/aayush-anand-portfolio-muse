@@ -29,39 +29,42 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="bg-black py-24 md:py-32 border-t border-foreground">
-      <div className="container mx-auto px-6">
-        <h2 className="text-display-md font-display mb-20 text-white">SERVICES /</h2>
+    // --- THIS IS THE FIX ---
+    // The 'container mx-auto' div was removed.
+    // Padding (px-4 md:px-8) was added to the <section> tag to match your other sections.
+    <section id="services" className="bg-black py-24 md:py-32 border-t border-foreground px-4 md:px-8">
+      
+      <h2 className="text-display-md font-display mb-20 text-white">SERVICES /</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-          {services.map((service, index) => (
-            <article key={index} className="glass-card p-8 rounded-xl">
-              <h3 className="text-2xl md:text-3xl font-display mb-4">
-                {service.title}
-              </h3>
-              <div className="flex gap-2 mb-4 flex-wrap">
-                {service.tags.map((tag, tagIndex) => (
-                  <span key={tagIndex} className="text-xs font-body tracking-wider opacity-60">
-                    {tag}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+        {services.map((service, index) => (
+          <article key={index} className="glass-card p-8 rounded-xl">
+            <h3 className="text-2xl md:text-3xl font-display mb-4">
+              {service.title}
+            </h3>
+            <div className="flex gap-2 mb-4 flex-wrap">
+              {service.tags.map((tag, tagIndex) => (
+                <span key={tagIndex} className="text-xs font-body tracking-wider opacity-60">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <p className="text-base md:text-lg font-body leading-relaxed mb-4">
+              {service.description}
+            </p>
+            {service.tools && (
+              <div className="flex gap-3 mt-6 flex-wrap">
+                {service.tools.map((tool, toolIndex) => (
+                  <span key={toolIndex} className="px-3 py-1 border border-foreground text-xs font-body tracking-wider">
+                    {tool}
                   </span>
                 ))}
               </div>
-              <p className="text-base md:text-lg font-body leading-relaxed mb-4">
-                {service.description}
-              </p>
-              {service.tools && (
-                <div className="flex gap-3 mt-6 flex-wrap">
-                  {service.tools.map((tool, toolIndex) => (
-                    <span key={toolIndex} className="px-3 py-1 border border-foreground text-xs font-body tracking-wider">
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </article>
-          ))}
-        </div>
+            )}
+          </article>
+        ))}
       </div>
+      
     </section>
   );
 };
