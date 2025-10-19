@@ -31,9 +31,13 @@ const AboutSection = () => {
           <img 
             src={aboutAbstractImage} 
             alt="Abstract builder blocks" 
-            // --- THIS IS THE FIX ---
-            // Removed max-w-sm to allow it to fill more of its container.
-            // Adjusted object-cover to object-contain to ensure the full image is visible if needed.
             className="w-full h-auto object-contain" 
           />
         </div>
+
+      </div> {/* This closes the grid div */}
+    </section>
+  ); // This closes the return statement
+}; // This closes the component function
+
+export default AboutSection;
