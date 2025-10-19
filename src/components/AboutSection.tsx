@@ -1,63 +1,39 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+// Import the image at the top
+import aboutAbstractImage from '../assets/about-abstract.jpg';
 
-const ArsenalSection = () => {
+const AboutSection = () => {
   return (
-    // Corrected alignment and padding
-    <section id="arsenal" className="section-dark py-24 md:py-32 px-4 md:px-8 border-t border-foreground">
+    <section id="about" className="py-12 px-4 md:px-8">
       
-      <h2 className="text-display-md font-display mb-16">MY ARSENAL /</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
+        
+        {/* --- Column 1: Your Text --- */}
+        <div className="max-w-4xl text-left">
+          <h2 className="text-display-md font-display mb-12">
+            Builder & Strategist /
+          </h2>
+          
+          <div className="space-y-4 text-lg">
+            <p>
+              My focus is the full 0→1 journey: taking a product from its first version to a scalable business. At a high-growth startup, that means I launch the product, build the go-to-market strategy, and help lead the fundraising that fuels our growth. I aim to build a product so effective that its first customers become its first investors.
+            </p>
+            <p>
+              This hands-on approach started long before my current role. At the Birla Institute of Technology, my engineering work ran parallel to actively co-leading the e-cell and the IEEE student branch. But the real lesson came from RoboGears, a stealth venture I co-founded to sell affordable robotics parts. Building a supply chain from scratch and selling over 50 units taught me more than any textbook could.
+            </p>
+            <p>
+              Every role has been a step towards one goal: to be an entrepreneur who builds impactful companies. I am not just building a career; I am building the foundation for my own venture.
+            </p>
+          </div>
+        </div>
 
-      <Accordion type="single" collapsible className="w-full max-w-4xl space-y-6">
-        <AccordionItem value="strategy" className="border-dark-fg">
-          <AccordionTrigger className="text-2xl md:text-4xl font-display hover:no-underline py-6">
-            01. GTM Strategy & Fundraising
-          </AccordionTrigger>
-          <AccordionContent className="text-base md:text-lg font-body space-y-3 pt-4 pb-6">
-            <div className="pl-6 space-y-2">
-              <p>• Go-to-Market Execution</p>
-              <p>• Project Management</p>
-              <p>• Business Process Improvement</p>
-              <p>• Resource Allocation & Change Management</p>
-              <p>• Risk Mitigation </p>
-              <p>• Operational Scalability</p>
-              <p>• Strategic Planning</p>
-              <p>• KPI Development & Tracking </p>
-              <p>• Cross-Functional Team Leadership </p>
-              <p>• Venture Narrative & Fundraising</p>
-              <p>• Building High-Ownership Teams</p>
-            </div>
-          </AccordionContent>
-        </AccordionItem>
-
-        <AccordionItem value="product" className="border-dark-fg">
-          <AccordionTrigger className="text-2xl md:text-4xl font-display hover:no-underline py-6">
-            02. Product Management
-          </AccordionTrigger>
-          <AccordionContent className="text-base md:text-lg font-body space-y-3 pt-4 pb-6">
-            <div className="pl-6 space-y-2">
-              <p>• Zero-to-One Product Builds</p>
-              <p>• Product-Led Growth (PLG)</p>
-              <p>• Customer Discovery & Validation</p>
-              <p>• Roadmap Development</p>
-              <p>• User-Centered Design</p>
-              <p>• Agile / Scrum / Kanban</p>
-              <p>• MVP Developments</p>
-              <p>• A/B Testing</p>
-              <p>• Product Segmenatation & Target Setting</p>
-              <p>• MVP Development </p>
-              <p>• Feature Prioritization</p>
-            </div>
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
-      
-    </section>
-  ); // <-- This was missing
-}; // <-- This was missing
-
-export default ArsenalSection;
+        {/* --- Column 2: Your Image --- */}
+        <div className="w-full flex items-center justify-center pt-8">
+          <img 
+            src={aboutAbstractImage} 
+            alt="Abstract builder blocks" 
+            // --- THIS IS THE FIX ---
+            // Removed max-w-sm to allow it to fill more of its container.
+            // Adjusted object-cover to object-contain to ensure the full image is visible if needed.
+            className="w-full h-auto object-contain" 
+          />
+        </div>
