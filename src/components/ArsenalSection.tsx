@@ -1,4 +1,3 @@
-// This import is now fixed: all components are named explicitly.
 import {
   Accordion,
   AccordionContent,
@@ -6,51 +5,56 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-// I've created this data based on your screenshot.
-const arsenalData = [
-  {
-    id: "strategy",
-    number: "01.",
-    title: "Strategy & Operations",
-    // TODO: Add your description points inside the quotes
-    content: "Add your details about Strategy & Operations here. You can include bullet points or paragraphs.",
-  },
-  {
-    id: "product",
-    number: "02.",
-    title: "Product Management",
-    // TODO: Add your description points inside the quotes
-    content: "Add your details about Product Management here. You can include bullet points or paragraphs.",
-  },
-];
-
 const ArsenalSection = () => {
   return (
-    // This <section> tag includes the fix for the left-alignment
-    <section id="arsenal" className="py-12 px-4 md:px-8">
-      
-      <h2 className="text-display-md font-display mb-20">MY ARSENAL /</h2>
+    <section className="section-dark py-24 md:py-32">
+      <div className="container mx-auto px-6">
+        <h2 className="text-display-md font-display mb-16">MY ARSENAL /</h2>
 
-      <Accordion type="single" collapsible className="w-full">
-        {arsenalData.map((item) => (
-          <AccordionItem value={item.id} key={item.id}>
-            <AccordionTrigger className="hover:no-underline">
-              <div className="text-left w-full">
-                <p className="text-gray-400">{item.number}</p>
-                {/* We use font-medium here for consistency with your other sections */}
-                <h3 className="text-2xl font-medium">{item.title}</h3>
-              </div>
+        <Accordion type="single" collapsible className="w-full max-w-4xl space-y-6">
+          <AccordionItem value="strategy" className="border-dark-fg">
+            <AccordionTrigger className="text-2xl md:text-4xl font-display hover:no-underline py-6">
+              01. GTM Strategy & Fundraising
             </AccordionTrigger>
-            <AccordionContent>
-              <div className="pl-4">
-                {/* This is placeholder content. You can replace it with your actual text or bullet points. */}
-                <p className="mt-4">{item.content}</p>
+            <AccordionContent className="text-base md:text-lg font-body space-y-3 pt-4 pb-6">
+              <div className="pl-6 space-y-2">
+                <p>• Go-to-Market Execution</p>
+                <p>• Project Management</p>
+                <p>• Business Process Improvement</p>
+                <p>• Resource Allocation & Change Management</p>
+                <p>• Risk Mitigation </p>
+                <p>• Operational Scalability</p>
+                <p>• Strategic Planning</p>
+                <p>• KPI Development & Tracking </p>
+                <p>• Cross-Functional Team Leadership </p>
+                <p>• Venture Narrative & Fundraising</p>
+                <p>• Building High-Ownership Teams</p>
               </div>
             </AccordionContent>
           </AccordionItem>
-        ))}
-      </Accordion>
-      
+
+          <AccordionItem value="product" className="border-dark-fg">
+            <AccordionTrigger className="text-2xl md:text-4xl font-display hover:no-underline py-6">
+              02. Product Management
+            </AccordionTrigger>
+            <AccordionContent className="text-base md:text-lg font-body space-y-3 pt-4 pb-6">
+              <div className="pl-6 space-y-2">
+                <p>• Zero-to-One Product Builds</p>
+                <p>• Product-Led Growth (PLG)</p>
+                <p>• Customer Discovery & Validation</p>
+                <p>• Roadmap Development</p>
+                <p>• User-Centered Design</p>
+                <p>• Agile / Scrum / Kanban</p>
+                <p>• MVP Developments</p>
+                <p>• A/B Testing</p>
+                <p>• Product Segmenatation & Target Setting</p>
+                <p>• MVP Development </p>
+                <p>• Feature Prioritization</p>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
     </section>
   );
 };
