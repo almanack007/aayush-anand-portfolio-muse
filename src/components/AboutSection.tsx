@@ -1,11 +1,10 @@
 // Import the image at the top
-import aboutAbstractImage from '../assets/about-abstract.jpg'; // Update this if you named it differently
+import aboutAbstractImage from '../assets/about-abstract.jpg';
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-12 px-4 md:px-8">
       
-      {/* This grid creates the two-column layout on medium screens (md) and up */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
         
         {/* --- Column 1: Your Text --- */}
@@ -32,13 +31,9 @@ const AboutSection = () => {
           <img 
             src={aboutAbstractImage} 
             alt="Abstract builder blocks" 
-            className="w-full max-w-sm h-auto object-cover" 
+            // --- THIS IS THE FIX ---
+            // Removed max-w-sm to allow it to fill more of its container.
+            // Adjusted object-cover to object-contain to ensure the full image is visible if needed.
+            className="w-full h-auto object-contain" 
           />
         </div>
-
-      </div>
-    </section>
-  );
-};
-
-export default AboutSection;
