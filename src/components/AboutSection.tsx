@@ -1,5 +1,7 @@
-// Import the image at the top
-import aboutAbstractImage from '../assets/about-abstract.jpg';
+// --- STEP 1 ---
+// This line is updated to import your new image.
+// Make sure your file is named 'new-about-image.jpg' in the 'src/assets' folder.
+import newAboutImage from '../assets/new-about-image.jpg';
 
 const AboutSection = () => {
   return (
@@ -29,15 +31,17 @@ const AboutSection = () => {
         {/* --- Column 2: Your Image --- */}
         <div className="w-full flex items-center justify-center pt-8">
           <img 
-            src={aboutAbstractImage} 
+            // --- STEP 2 ---
+            // This now uses your new image variable
+            src={newAboutImage} 
             alt="Abstract builder blocks" 
             className="w-full h-auto object-contain" 
           />
         </div>
 
-      </div> {/* This closes the grid div */}
+      </div>
     </section>
-  ); // This closes the return statement
-}; // This closes the component function
+  );
+};
 
 export default AboutSection;
