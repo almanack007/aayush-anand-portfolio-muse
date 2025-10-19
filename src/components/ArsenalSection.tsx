@@ -15,11 +15,11 @@ const ArsenalSection = () => {
       <Accordion type="single" collapsible className="w-full max-w-4xl space-y-6">
         <AccordionItem value="strategy" className="border-dark-fg">
           <AccordionTrigger className="text-2xl md:text-4xl font-display hover:no-underline py-6">
-            01. GTM Strategy & Fundraising
+            01. GTM & Fundraising
           </AccordionTrigger>
           <AccordionContent className="text-base md:text-lg font-body space-y-3 pt-4 pb-6">
             <div className="pl-6 space-y-2">
-              <p>• Go-to-Market Execution</p>
+              <p>• Go-to-Market Strategy</p>
               <p>• Project Management</p>
               <p>• Business Process Improvement</p>
               <p>• Resource Allocation & Change Management</p>
