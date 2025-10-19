@@ -7,8 +7,7 @@ import {
 
 const ArsenalSection = () => {
   return (
-    // --- THIS IS THE FIX ---
-    // Removed 'container mx-auto' div and added padding (px-4 md:px-8) to the <section> tag.
+    // Corrected alignment and padding
     <section id="arsenal" className="section-dark py-24 md:py-32 px-4 md:px-8 border-t border-foreground">
       
       <h2 className="text-display-md font-display mb-16">MY ARSENAL /</h2>
@@ -47,4 +46,18 @@ const ArsenalSection = () => {
               <p>• Roadmap Development</p>
               <p>• User-Centered Design</p>
               <p>• Agile / Scrum / Kanban</p>
-              <p>•
+              <p>• MVP Developments</p>
+              <p>• A/B Testing</p>
+              <p>• Product Segmenatation & Target Setting</p>
+              <p>• MVP Development </p>
+              <p>• Feature Prioritization</p>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+      
+    </section>
+  ); // <-- This was missing
+}; // <-- This was missing
+
+export default ArsenalSection;
