@@ -265,18 +265,13 @@ const HeroSection = () => {
               variants={itemVariants}
             >
               {/* Get in Touch CTA */}
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeXr_x4Ak82V9gmndPK77Bci_RsiJ5QZslsPR7b6H4-M3_XMQ/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Button 
+                onClick={scrollToContact}
+                size="lg"
+                className="bg-foreground text-background hover:bg-foreground/90 transition-colors text-sm tracking-wider px-8 py-6 rounded-none relative overflow-hidden group"
               >
-                <Button 
-                  size="lg"
-                  className="bg-foreground text-background hover:bg-foreground/90 transition-colors text-sm tracking-wider px-8 py-6 rounded-none relative overflow-hidden group"
-                >
-                  <span className="relative z-10">GET IN TOUCH</span>
-                </Button>
-              </a>
+                <span className="relative z-10">GET IN TOUCH</span>
+              </Button>
 
               {/* Download Resume CTA */}
               <a 
