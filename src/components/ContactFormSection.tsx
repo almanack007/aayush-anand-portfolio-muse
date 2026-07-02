@@ -25,10 +25,10 @@ const ContactFormSection = () => {
       const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeXr_x4Ak82V9gmndPK77Bci_RsiJ5QZslsPR7b6H4-M3_XMQ/formResponse";
       
       const formDataEncoded = new URLSearchParams();
-      formDataEncoded.append("entry.1826182394", formData.name);
-      formDataEncoded.append("entry.1562027025", formData.email);
-      formDataEncoded.append("entry.1510006801", formData.contact);
-      formDataEncoded.append("entry.1867320212", formData.ask);
+      formDataEncoded.append("entry.1732774961", formData.name);
+      formDataEncoded.append("entry.2123696465", formData.email);
+      formDataEncoded.append("entry.1409150417", formData.contact);
+      formDataEncoded.append("entry.72033180", formData.ask);
 
       await fetch(formUrl, {
         method: "POST",
@@ -78,7 +78,9 @@ const ContactFormSection = () => {
           {/* Contact Links */}
           <div className="space-y-8">
             <a 
-              href="mailto:theaayush9431@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=theaayush9431@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block text-xl md:text-2xl font-body hover:opacity-60 transition-opacity"
             >
               EMAIL →
@@ -155,8 +157,8 @@ const ContactFormSection = () => {
         </div>
 
         <div className="border-t border-dark-fg pt-8">
-          <p className="text-xs font-body tracking-wider opacity-60">
-            © 2025 AAYUSH ANAND
+          <p className="text-xs font-mono tracking-wider opacity-60">
+            © 2026-present Aayush Anand. (007)
           </p>
         </div>
       </div>
